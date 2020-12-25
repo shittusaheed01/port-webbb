@@ -207,10 +207,10 @@ img {
   margin-bottom: 2em;
   display: flex;
   flex-direction: column;
+  background-color: #111;
 }
 .portfolio-content-container img{
   order: -1;
-  margin-top: 0.5em;
 }
 .overlay h3{
   font-size: 2rem;
