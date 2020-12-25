@@ -1,0 +1,124 @@
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+.portfolio-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  max-width: 1000px;
+}
+.portfolio-content-container{
+  position: relative;
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+html{
+  font-size: 10px;
+}
+.portfolio-content-container img{
+  order: -1;
+  margin-top: 0.5em;
+}
+.overlay h3{
+  font-size: 2rem;
+  text-align: center;
+  margin: 0.2em 0 0 0;
+}
+.overlay p{
+  font-size: 1.7rem;
+  padding: 0 0.4em;
+  margin:0.2em 0 0 0;
+  text-align: center;
+}
+.tech{
+  display: flex;
+  width: 90%;
+  margin: 0.2em auto 0 auto;
+  justify-content: center;
+  padding: 0 1.5em;
+}
+.tech p{
+  margin-top: 0.5em;
+  font-size: 1.7rem;
+}
+.tech ul{
+  display: flex;
+  /* flex-direction: column; */
+  list-style-type: none;
+  padding: 0;
+  margin: 0.5em 2em 0 0;
+  justify-content: space-between;
+}
+.tech li{
+  font-size: 1.2rem;
+  margin: 0.2em;
+  background-color: blue;
+  color: aliceblue;
+  padding: 0.3em;
+  border-radius: 0.5em;
+  border: none;
+  text-align: center;
+}
+.overlay a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  text-align: center;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  color: #3289f0;
+  background-color: beige;
+  width: 30%;
+  margin: 1em auto 0 auto;
+  padding: 0.5em;
+}
+.overlay a:hover,
+.overlay a:focus{
+  color: #063975;
+}
+@media only screen and (min-width: 700px){
+  .overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color:#008CBA ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.portfolio-content-container:hover .overlay {
+  opacity: 1;
+}
+.portfolio-content{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.portfolio-content-container{
+  margin: 0 0 2em 0;
+  width: 45%;
+}
+.text {
+  margin-top: 2em;
+}
+.overlay h3{
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+}
