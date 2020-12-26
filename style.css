@@ -9,6 +9,18 @@ body{
   background-color: black;
   color: #f1f1f1;
 }
+a{
+  font-family: "Roboto Slab", serif;
+}
+li{
+  font-family: "Rufina", serif;
+}
+h2{
+  font-family: "Roboto Slab", serif;
+}
+h3{
+  font-family: "Roboto", sans-serif;
+}
 header{
   background-color: #3289f0;
   position: fixed;
@@ -30,6 +42,7 @@ h1{
   margin: 0;
   color: antiquewhite;
   text-align: center;
+  font-family: "Roboto Slab", serif;
 }
 header p{
   font-size: 1.3rem;
@@ -38,6 +51,7 @@ header p{
   padding: 0;
   text-align: center;
   color: black;
+  font-family: "Rokkitt", serif;
 }
 header ul{
   list-style: none;
@@ -59,6 +73,15 @@ header a:focus{
   border-radius:0.5em ;
   transition: all ease 0.5s;
   font-weight: 600;
+}
+@media only screen and (min-width: 780px){
+  .nav-container{
+    flex-direction: row;
+    padding: 2em;
+    width: 95%;
+    margin: auto;
+  }
+  
 }
 /* header button{
   background: none;
@@ -123,6 +146,7 @@ blockquote{
   margin-top: 2em;
 }
 .socials button{
+  margin: auto;
   font-size: 1.5rem;
   padding: 0.5em;
   border: none;
@@ -130,6 +154,10 @@ blockquote{
   background-color: dodgerblue;
   color: #f1f1f1;
   cursor: pointer;
+}
+.social-links{
+  display: flex;
+  flex-direction: column;
 }
 .socials button:hover,
 .socials button:focus{
@@ -174,8 +202,22 @@ footer p{
   font-size: 2.5rem;
   color: wheat;
 }
-
+@media only screen and (min-width: 780px){
+  .social-links{
+    display: flex;
+    flex-direction: row;
+  }
+}
 /* About Page */
+.about-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1000px;
+  width: 95%;
+  margin: 10em auto 0em auto;
+}
 .portfolio-wordings h2{
   font-size: 2.3rem;
   text-align: center;
@@ -183,6 +225,9 @@ footer p{
 .portfolio-wordings p{
   font-size: 2rem;
   padding: 0 1em;
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
 }
 /* Long Work */
 img {
@@ -207,7 +252,13 @@ img {
   margin-bottom: 2em;
   display: flex;
   flex-direction: column;
-  background-color: #111;
+  /* background-color: #111; */
+  padding-bottom: 2em;
+  border-bottom: 0.2em solid #063975;
+}
+.portfolio-content-container:last-child{
+  border-bottom: none;
+  padding-bottom: 0;
 }
 .portfolio-content-container img{
   order: -1;
@@ -268,8 +319,9 @@ img {
 .overlay a:hover,
 .overlay a:focus{
   color: #063975;
+  transition: all ease 0.5s;
 }
-@media only screen and (min-width: 700px){
+@media only screen and (min-width: 780px){
   .overlay{
   position: absolute;
   top: 0;
@@ -289,15 +341,19 @@ img {
 }
 .portfolio-content-container:hover .overlay {
   opacity: 1;
+  transition: all ease 0.6s;
 }
 .portfolio-content{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 .portfolio-content-container{
   margin: 0 0 2em 0;
-  width: 45%;
+  width: 49%;
+  border-bottom: none;
+  padding-bottom: 2em;
 }
 .text {
   margin-top: 2em;
@@ -307,20 +363,5 @@ img {
   margin-top: 3rem;
 }
 }
-/* END */
 
-/* .overlay{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.5s ease;
-  background-color:#008CBA ;
-}
-.portfolio-content-container:hover .overlay {
-  opacity: 0.8;
-} */
+/* contacts */
